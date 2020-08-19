@@ -46,7 +46,7 @@ class MyQueue:
         """
         Removes the element from in front of queue and returns that element.
         """
-        self.__shif_stacks__()
+        self.__shif_stacks()
         return self.stack_new.pop()
         
 
@@ -54,7 +54,7 @@ class MyQueue:
         """
         Get the front element.
         """
-        self.__shif_stacks__()
+        self.__shif_stacks()
         return self.stack_new.peek()
         
 
@@ -64,7 +64,7 @@ class MyQueue:
         """
         return self.stack_new.is_empty() and self.stack_old.is_empty()
         
-    def __shif_stacks__(self) -> None:
+    def __shif_stacks(self) -> None:
         if self.stack_new.is_empty():
             while not self.stack_old.is_empty():
                 self.stack_new.push(self.stack_old.pop())
